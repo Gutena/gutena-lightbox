@@ -14,8 +14,6 @@ License URI: http://www.gnu.org/licenses/gpl.html
 
 Easily and instantly add Lightbox Block to your Gutenberg Editor.
 
-[youtube https://www.youtube.com/watch?v=Idy5H0TziBA]
-
 #### Compatibility
 
 * This plugin is fully compatible with WordPress Version 5.8 and beyond and also compatible with any WordPress theme.
