@@ -1,0 +1,16 @@
+/.wordpress-org
+/.git
+/.github
+/node_modules
+/src
+/output
+
+.distignore
+.editorconfig
+.gitignore
+frontend.js
+gulpfile.js
+package.json
+package-lock.json
+phpcs.xml
+README.md

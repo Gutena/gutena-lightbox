@@ -1,0 +1,27 @@
+{
+	"name": "gutena-lightbox",
+	"version": "1.0.0",
+	"description": "Lightbox block plugin",
+	"author": "Sayan Datta",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format:js": "wp-scripts format-js",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"start": "wp-scripts start",
+		"packages-update": "wp-scripts packages-update"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^23.5.0",
+		"del": "^6.0.0",
+		"gulp": "^4.0.2",
+		"gulp-wp-pot": "^2.5.0",
+		"gulp-zip": "^5.1.0"
+	},
+	"dependencies": {
+		"classnames": "^2.3.1",
+		"gulp-cli": "^2.3.0"
+	}
+}

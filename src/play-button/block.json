@@ -1,0 +1,82 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+    "name": "gutena/play-button",
+    "title": "Play Button",
+    "category": "gutena",
+    "parent": [ "core/cover" ],
+    "icon": "email-alt",
+    "description": "Gutena Lightbox Play Button",
+    "textdomain": "gutena-lightbox",
+    "supports": {
+        "html": false,
+        "inserter": false,
+	    "reusable": false,
+		"color": {
+			"text": false,
+			"link": false,
+			"gradients": true,
+			"background": true,
+			"enableContrastChecker": false
+		},
+		"spacing": {
+			"padding": true,
+			"margin": true
+		},
+        "align": [ "left", "right" ]
+    },
+	"attributes": {
+		"uniqueId": {
+            "type": "string"
+        },
+		"buttonShape": {
+			"type": "string",
+			"default": "circle"
+		},
+		"buttonType": {
+			"type": "string",
+			"default": "filled"
+		},
+		"rippleEffect": {
+            "type": "boolean",
+			"default": false
+        },
+		"buttonRadius": {
+			"type": "number",
+			"default": 0
+		},
+		"buttonWidth": {
+			"type": "number",
+			"default": 64
+		},
+		"iconSize": {
+			"type": "number",
+			"default": 10
+		},
+		"iconColor": {
+			"type": "string",
+			"default": "#0274FA"
+		},
+		"buttonColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"iconColorHover": {
+			"type": "string"
+		},
+		"buttonColorHover": {
+			"type": "string"
+		},
+		"videoUrl": {
+			"type": "string"
+		},
+		"videoAction": {
+			"type": "string",
+			"default": "lightbox"
+		},
+		"blockStyles": {
+            "type": "object"
+        }
+    },
+    "editorScript": "file:./index.js"
+}
