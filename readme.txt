@@ -24,9 +24,13 @@ Easily and instantly add Lightbox Block to your Gutenberg Editor.
 
 If you like this plugin, consider exploring our other block plugins:
 
-🧱 [PhotoFeed Block by Gutena](https://wordpress.org/plugins/photofeed-block-by-gutena/) - Display Instagram Photos from your Instagram accounts, either in the same single feed or in multiple different ones.
+🧱 [Gutena PhotoFeed](https://wordpress.org/plugins/photofeed-block-by-gutena/) - Display Instagram Photos from your Instagram accounts, either in the same single feed or in multiple different ones.
 
-🧱 [Post Featured Tag Block by Gutena](https://wordpress.org/plugins/post-featured-tag-block-by-gutena/) - Post Featured Tag Block use to add custom featured or new tag on post based on post date.
+🧱 [Gutena Accordion](https://wordpress.org/plugins/gutena-accordion/) - Easily and instantly add Accordion Block to your Gutenberg Editor.
+
+🧱 [Gutena Forms](https://wordpress.org/plugins/gutena-forms/) - Gutena Forms is a native form block for Gutenberg. Built for Look, Speed and Functionality.
+
+🧱 [Gutena Recent Post Tag](https://wordpress.org/plugins/post-featured-tag-block-by-gutena/) - Post Featured Tag Block use to add custom featured or new tag on post based on post date.
 
 ## 🌐 Our Products
 
@@ -54,7 +58,7 @@ If you like this plugin, consider exploring our other themes and plugins:
 == Changelog ==
 
 = 1.0.0 =
-Release Date: August 30, 2022
+Release Date: September 7, 2022
 
 * Initial Release on WordPress.org.
 
