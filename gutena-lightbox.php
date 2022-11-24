@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Gutena Lightbox
  * Description:     Gutena Lightbox
- * Version:         1.0.0
+ * Version:         1.0.1
  * Author:          ExpressTech
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
@@ -30,7 +30,7 @@ if ( ! class_exists( 'Gutena_Lightbox' ) ) {
 		 *
 		 * @var string
 		 */
-		public $version = '1.0.0';
+		public $version = '1.0.1';
 
 		/**
 		 * Instance of this class.
@@ -94,12 +94,15 @@ if ( ! class_exists( 'Gutena_Lightbox' ) ) {
 		 * Render Gutena play button block.
 		 */
 		public function render_block( $attributes, $content, $block ) {
-			return sprintf(
-				'<style id="gutena-play-button-css-%1$s">.gutena-play-button-block-%1$s { %2$s }</style> %3$s',
-				$attributes['uniqueId'],
-				$this->render_css( $attributes['blockStyles'] ),
-				$content
-			);
+			add_action( 'wp_head', function() use ( $attributes ) {
+				printf(
+					'<style id="gutena-play-button-css-%1$s">.gutena-play-button-block-%1$s { %2$s }</style>',
+					esc_attr( $attributes['uniqueId'] ),
+					esc_html( $this->render_css( $attributes['blockStyles'] ) )
+				);
+			} );
+
+			return $content;
 		}
 
 		/**
