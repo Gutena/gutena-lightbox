@@ -2,8 +2,8 @@
 Contributors: expresstech, infosatech
 Tags: lightbox, lightbox block, block, youtube, vimeo
 Requires at least: 5.8
-Tested up to: 6.0
-Stable tag: 1.0.0
+Tested up to: 6.1
+Stable tag: 1.0.1
 Requires PHP: 5.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -54,6 +54,15 @@ If you like this plugin, consider exploring our other themes and plugins:
 1. Activate Gutena Lightbox from your Plugins page.
 
 == Changelog ==
+
+= 1.0.1 =
+Release Date: November 24, 2022
+
+* Tweak: Block CSS will now load on `wp_head`.
+* Tweak: Changed clip-path to clipPath.
+* Fixed: Block Editor variation preview style.
+* Removed: Unused code.
+* Tested with WordPress v6.1.
 
 = 1.0.0 =
 Release Date: September 7, 2022

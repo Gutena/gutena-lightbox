@@ -3,15 +3,13 @@
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n'
-import { withDispatch, useDispatch, useSelect } from '@wordpress/data';
+import { useDispatch, useSelect } from '@wordpress/data';
 import {
-	createBlock,
 	createBlocksFromInnerBlocksTemplate,
 	store as blocksStore,
 } from '@wordpress/blocks';
 import { 
 	__experimentalBlockVariationPicker as BlockVariationPicker, 
-	InnerBlocks, 
 	useBlockProps, 
 	useInnerBlocksProps,
 	store as blockEditorStore
@@ -20,7 +18,7 @@ import {
 import variations from './variations'
 import './editor.scss';
 
-function EditContainer( { clientId, context, attributes, setAttributes } ) {
+function EditContainer() {
     const blockProps = useBlockProps( {
         className: 'gutena-lightbox-block',
     } );
@@ -30,12 +28,10 @@ function EditContainer( { clientId, context, attributes, setAttributes } ) {
         renderAppender: false,
     } );
 
-    return (
-        <div { ...innerBlocksProps } />
-    );
+    return <div { ...innerBlocksProps } />;
 }
 
-function Placeholder( { clientId, attributes, setAttributes } ) {
+function Placeholder( { clientId, setAttributes } ) {
     const defaultVariation = variations.filter( item => item.isDefault )[0] || variations[0];
 
     const { replaceInnerBlocks } = useDispatch( blockEditorStore );
