@@ -6,7 +6,7 @@
     "category": "gutena",
     "parent": [ "core/cover", "core/column", "core/group", "core/row", "core/stack" ],
 	"keywords": [ "lightbox", "popup", "block", "youtube", "vimeo", "button" ],
-    "description": "Gutena Lightbox Play Button",
+    "description": "Gutena Video Lightbox Play Button",
     "textdomain": "gutena-lightbox",
     "supports": {
         "html": false,

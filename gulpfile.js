@@ -20,7 +20,7 @@ function create_pot() {
     return gulp.src( potPath )
         .pipe( wpPot( {
             domain: 'gutena-lightbox',
-            package: 'Gutena Lightbox',
+            package: 'Gutena Video Lightbox',
             copyrightText: 'ExpressTech',
             ignoreTemplateNameHeader: true
         } ) )

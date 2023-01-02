@@ -53,9 +53,9 @@ If you like this plugin, consider exploring our other themes and plugins:
 == Installation ==
 
 1. Visit 'Plugins > Add New'.
-1. Search for 'Gutena Lightbox' and install it.
+1. Search for 'Gutena Video Lightbox' and install it.
 1. Or you can upload the `gutena-lightbox` folder to the `/wp-content/plugins/` directory manually.
-1. Activate Gutena Lightbox from your Plugins page.
+1. Activate Gutena Video Lightbox from your Plugins page.
 
 == Changelog ==
 
