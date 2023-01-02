@@ -19,7 +19,7 @@
     "vimeo",
     "button"
   ],
-  "description": "Gutena Lightbox Play Button",
+  "description": "Gutena Video Lightbox Play Button",
   "textdomain": "gutena-lightbox",
   "supports": {
     "html": false,
