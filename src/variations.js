@@ -15,7 +15,7 @@ const variations = [
         description: __( 'Default Style' ),
         isDefault: true,
         innerBlocks: [ 
-            [ "gutena/play-button", { buttonColor: "#3f6de4", iconColor: "#ffffff" } ],
+            [ "gutena/play-button", { buttonColor: "#0EA489", iconColor: "#ffffff" } ],
             [ "core/paragraph", { content: "A Message from CEO", align: "center", style: { typography: { fontSize: "18px" }, spacing: { padding: { top: "0px", right: "0px", bottom: "0px", left: "0px" }, margin: { top: "0px", bottom: "0px" } } } } ]
         ],
         scope: [ 'block' ],
@@ -28,7 +28,7 @@ const variations = [
             <svg width="534" height="352" viewBox="0 0 534 352" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="533.684" height="351.411" fill="#CCD5EC"/>
                 <circle cx="267" cy="176" r="38" fill="white"/>
-                <path d="M258.837 163.915L282.283 176.439L259.714 190.481L258.837 163.915Z" fill="#3F6DE4"/>
+                <path d="M258.837 163.915L282.283 176.439L259.714 190.481L258.837 163.915Z" fill="#0EA489"/>
             </svg>
         ),
         innerBlocks: [ 
@@ -47,7 +47,7 @@ const variations = [
             <svg width="534" height="352" viewBox="0 0 534 352" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="533.684" height="351.411" fill="#CCD5EC"/>
                 <rect x="228" y="137" width="78" height="78" fill="white"/>
-                <path d="M258.837 162.915L282.283 175.439L259.714 189.481L258.837 162.915Z" fill="#3F6DE4"/>
+                <path d="M258.837 162.915L282.283 175.439L259.714 189.481L258.837 162.915Z" fill="#0EA489"/>
             </svg>
         ),
         innerBlocks: [

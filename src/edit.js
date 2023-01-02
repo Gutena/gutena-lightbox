@@ -4,10 +4,7 @@
  */
 import { __ } from '@wordpress/i18n'
 import { useDispatch, useSelect } from '@wordpress/data';
-import {
-	createBlocksFromInnerBlocksTemplate,
-	store as blocksStore,
-} from '@wordpress/blocks';
+import { createBlocksFromInnerBlocksTemplate } from '@wordpress/blocks';
 import { 
 	__experimentalBlockVariationPicker as BlockVariationPicker, 
 	useBlockProps, 
