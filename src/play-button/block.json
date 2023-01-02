@@ -4,8 +4,8 @@
     "name": "gutena/play-button",
     "title": "Play Button",
     "category": "gutena",
-    "parent": [ "core/cover" ],
-    "icon": "email-alt",
+    "parent": [ "core/cover", "core/column", "core/group", "core/row", "core/stack" ],
+	"keywords": [ "lightbox", "popup", "block", "youtube", "vimeo", "button" ],
     "description": "Gutena Lightbox Play Button",
     "textdomain": "gutena-lightbox",
     "supports": {
@@ -78,5 +78,8 @@
             "type": "object"
         }
     },
-    "editorScript": "file:./index.js"
+    "editorScript": "file:./index.js",
+	"script": "file:./view.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
 }

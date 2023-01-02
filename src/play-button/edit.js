@@ -2,7 +2,7 @@
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
-import { useEffect, useState } from '@wordpress/element'
+import { useEffect } from '@wordpress/element'
 import {  
     __experimentalToggleGroupControl as ToggleGroupControl,
     __experimentalToggleGroupControlOption as ToggleGroupControlOption, 
@@ -180,9 +180,9 @@ export default function edit( { clientId, attributes, setAttributes } ) {
 
             { renderCSS }
 			<div { ...blockProps }>
-                <a className={ btnClassName } href={ videoUrl } target="_blank" data-action={ videoAction } data-ripple={ rippleEffect } rel="noopener">
+                <span className={ btnClassName } href={ videoUrl } target="_blank" data-action={ videoAction } data-ripple={ rippleEffect } rel="noopener">
                     <i className="play-icon"></i>
-                </a>
+                </span>
 			</div>
 		</>
 	);

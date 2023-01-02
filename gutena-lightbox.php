@@ -1,8 +1,8 @@
 <?php // @codingStandardsIgnoreLine
 /**
- * Plugin Name:     Gutena Lightbox
- * Description:     Gutena Lightbox
- * Version:         1.0.1
+ * Plugin Name:     Gutena Video Lightbox
+ * Description:     Gutena Video Lightbox
+ * Version:         1.0.2
  * Author:          ExpressTech
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
@@ -30,7 +30,7 @@ if ( ! class_exists( 'Gutena_Lightbox' ) ) {
 		 *
 		 * @var string
 		 */
-		public $version = '1.0.1';
+		public $version = '1.0.2';
 
 		/**
 		 * Instance of this class.
@@ -79,12 +79,12 @@ if ( ! class_exists( 'Gutena_Lightbox' ) ) {
 			wp_register_script( 'gutena-lightbox-tingle', plugins_url( 'assets/tingle.min.js', __FILE__ ), [], $this->version, true );
 
 			// Add dependencies.
-			$wp_styles = wp_styles()->query( 'gutena-lightbox-style', 'registered' );
+			$wp_styles = wp_styles()->query( 'gutena-play-button-style', 'registered' );
 			if ( $wp_styles && ! in_array( 'gutena-lightbox-tingle', $wp_styles->deps ) ) {
 				$wp_styles->deps[] = 'gutena-lightbox-tingle';
 			}
 
-			$wp_scripts = wp_scripts()->query( 'gutena-lightbox-script', 'registered' );
+			$wp_scripts = wp_scripts()->query( 'gutena-play-button-script', 'registered' );
 			if ( $wp_scripts && ! in_array( 'gutena-lightbox-tingle', $wp_scripts->deps ) ) {
 				$wp_scripts->deps[] = 'gutena-lightbox-tingle';
 			}
