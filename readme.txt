@@ -3,7 +3,7 @@ Contributors: expresstech, infosatech
 Tags: lightbox, popup, block, youtube, vimeo
 Requires at least: 5.8
 Tested up to: 6.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 Requires PHP: 5.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -23,6 +23,8 @@ Gutena Video Lightbox is a WordPress Block that allows you to add a video in a p
 == Other Blocks From Gutena ==
 
 If you like this plugin, consider exploring our other block plugins: 
+
+[Gutena Tabs](https://wordpress.org/plugins/gutena-tabs/) - A simple and easy-to-use WordPress plugin which allows you to create beautiful tabs in your posts and pages.
 
 [Gutena Newsletter](https://wordpress.org/plugins/newsletter-block-by-gutena/) - Easily and instantly add Newsletter Block to your Gutenberg Editor.
 
@@ -58,6 +60,13 @@ If you like this plugin, consider exploring our other themes and plugins:
 1. Activate Gutena Video Lightbox from your Plugins page.
 
 == Changelog ==
+
+= 1.0.3 =
+Release Date: February 10, 2023
+
+* Improvement: Single Asset file output.
+* Added: Gutena Kit CTA.
+* Fixed: CSS is not applying on some installations.
 
 = 1.0.2 =
 Release Date: January 2, 2023
