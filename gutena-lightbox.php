@@ -2,8 +2,9 @@
 /**
  * Plugin Name:     Gutena Video Lightbox
  * Description:     Gutena Video Lightbox
- * Version:         1.0.2
+ * Version:         1.0.3
  * Author:          ExpressTech
+ * Author URI:      https://expresstech.io
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:     gutena-lightbox
@@ -30,7 +31,7 @@ if ( ! class_exists( 'Gutena_Lightbox' ) ) {
 		 *
 		 * @var string
 		 */
-		public $version = '1.0.2';
+		public $version = '1.0.3';
 
 		/**
 		 * Instance of this class.
@@ -73,34 +74,26 @@ if ( ! class_exists( 'Gutena_Lightbox' ) ) {
 			register_block_type( __DIR__ . '/build/play-button', [
 				'render_callback' => [ $this, 'render_block' ],
 			] );
-
-			// Enqueue assets.
-			wp_register_style( 'gutena-lightbox-tingle', plugins_url( 'assets/tingle.min.css', __FILE__ ), [], $this->version );
-			wp_register_script( 'gutena-lightbox-tingle', plugins_url( 'assets/tingle.min.js', __FILE__ ), [], $this->version, true );
-
-			// Add dependencies.
-			$wp_styles = wp_styles()->query( 'gutena-play-button-style', 'registered' );
-			if ( $wp_styles && ! in_array( 'gutena-lightbox-tingle', $wp_styles->deps ) ) {
-				$wp_styles->deps[] = 'gutena-lightbox-tingle';
-			}
-
-			$wp_scripts = wp_scripts()->query( 'gutena-play-button-script', 'registered' );
-			if ( $wp_scripts && ! in_array( 'gutena-lightbox-tingle', $wp_scripts->deps ) ) {
-				$wp_scripts->deps[] = 'gutena-lightbox-tingle';
-			}
 		}
 
 		/**
 		 * Render Gutena play button block.
 		 */
 		public function render_block( $attributes, $content, $block ) {
-			add_action( 'wp_head', function() use ( $attributes ) {
-				printf(
-					'<style id="gutena-play-button-css-%1$s">.gutena-play-button-block-%1$s { %2$s }</style>',
-					esc_attr( $attributes['uniqueId'] ),
-					esc_html( $this->render_css( $attributes['blockStyles'] ) )
+			if ( ! empty( $attributes['uniqueId'] ) && ! empty( $attributes['blockStyles'] ) ) {
+				$unique_id = $attributes['uniqueId'];
+				$style_id = 'gutena-play-button-css-' . $unique_id;
+				$css = sprintf(
+					'.gutena-play-button-block-%1$s { %2$s }',
+					$unique_id,
+					$this->render_css( $attributes['blockStyles'] ),
 				);
-			} );
+
+				// print css
+				if ( ! wp_style_is( $style_id, 'enqueued' ) && apply_filters( 'gutena_lightbox_render_head_css', true, $attributes ) ) {
+					$this->render_inline_css( $css, $style_id, true );
+				}
+			}
 
 			return $content;
 		}
@@ -118,6 +111,24 @@ if ( ! class_exists( 'Gutena_Lightbox' ) ) {
 			}
 
 			return join( ';', $style );
+		}
+
+		/**
+		 * Render Inline CSS helper function
+		 *
+		 * @param array  $css the css for each rendered block.
+		 * @param string $style_id the unique id for the rendered style.
+		 * @param bool   $in_content the bool for whether or not it should run in content.
+		 */
+		private function render_inline_css( $css, $style_id, $in_content = false ) {
+			if ( ! is_admin() ) {
+				wp_register_style( $style_id, false );
+				wp_enqueue_style( $style_id );
+				wp_add_inline_style( $style_id, $css );
+				if ( 1 === did_action( 'wp_head' ) && $in_content ) {
+					wp_print_styles( $style_id );
+				}
+			}
 		}
 
 		/**
@@ -156,4 +167,9 @@ if ( ! function_exists( 'Gutena_Lightbox_init' ) ) {
 
 	// Start it.
 	Gutena_Lightbox_init();
+}
+
+// Gutena Ecosystem init.
+if ( file_exists( __DIR__ . '/includes/gutena/gutena-ecosys-onboard/gutena-ecosys-onboard.php' ) ) {
+	require_once  __DIR__ . '/includes/gutena/gutena-ecosys-onboard/gutena-ecosys-onboard.php';
 }

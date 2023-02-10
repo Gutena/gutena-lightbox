@@ -1,4 +1,5 @@
 import { __ } from '@wordpress/i18n';
+import tingle from 'tingle.js';
 
 document.addEventListener( 'DOMContentLoaded', () => {
     const lightboxNodeList = document.querySelectorAll( '.gutena-play-button-block a.play-button[data-action="lightbox"]' );
@@ -31,7 +32,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
             } else if ( videoUrl?.includes( 'vimeo' ) ) {
                 videoModal.setContent( gutenaSetContent( '<div class="embed-container"><iframe width="100%" height="400" src="https://player.vimeo.com/video/' + gutenaGetVimeoId( videoUrl ) + '?autoplay=1" frameborder="0" allowfullscreen></iframe></div>' ) );
             } else {
-                videoModal.setContent( gutenaSetContent( __( "Invalid Link!", "gutena-lightbox" ) ) );
+                videoModal.setContent( gutenaSetContent( __( 'Invalid Link!', 'gutena-lightbox' ) ) );
             }
 
             videoModal.open();
