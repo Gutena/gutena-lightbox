@@ -2,7 +2,7 @@
 Contributors: expresstech, infosatech
 Tags: lightbox, popup, block, youtube, vimeo
 Requires at least: 5.8
-Tested up to: 6.1
+Tested up to: 6.2
 Stable tag: 1.0.3
 Requires PHP: 5.6
 License: GPLv3
@@ -11,6 +11,8 @@ License URI: http://www.gnu.org/licenses/gpl.html
 == Description ==
 
 Gutena Video Lightbox is a WordPress Block that allows you to add a video in a popup window that goes over the website content. To create a lightbox, Just upload a display image, then put a video URL of Youtube / Vimeo.
+
+[youtube https://www.youtube.com/watch?v=pY-x4erbu4I]
 
 == Features ==
 
