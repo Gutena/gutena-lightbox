@@ -2,7 +2,7 @@
 Contributors: expresstech, infosatech
 Tags: lightbox, popup, block, youtube, vimeo
 Requires at least: 5.8
-Tested up to: 6.1
+Tested up to: 6.2
 Stable tag: 1.0.3
 Requires PHP: 5.6
 License: GPLv3
